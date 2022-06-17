@@ -1,12 +1,20 @@
 import { useState } from 'react';
 
 function Comments( props ){
-    const [ hook, setHook ] = useState( null )
+    const [ comments, setComments ] = useState( null );
+
+    const collectComments = () => {
+        console.log(event.target.value);
+        setComments('Comments: ' + event.target.value);
+    }
+    const storeComments = () => {
+        console.log(comments);
+    }
     return (
         <div>
             <h2>Any Comments You Would Like To Leave?</h2>
-            <input type="text" />
-            <button>Next</button>
+            <input onChange={collectComments}type="text" />
+            <button onClick={storeComments}>Next</button>
             {/* <p>Props: { JSON.stringify( props ) }</p> */}
         </div>
     );
