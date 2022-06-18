@@ -13,7 +13,7 @@ function Support( props ){
     return (
         <div>
             <h2>How Well Are You Being Supported?</h2>
-            <input onChange={collectSupport}type="text" />
+            <input onChange={collectSupport}type="number" />
             <button onClick={storeSupport}>Next</button>
             {/* <p>Props: { JSON.stringify( props ) }</p> */}
         </div>

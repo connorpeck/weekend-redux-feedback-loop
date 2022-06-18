@@ -6,6 +6,7 @@ import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
+import Table from '../Comments/Table/Table';
 import {useSelector} from 'react-redux';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <li><a href="/#/understanding">Understanding</a></li>
         <li><a href="/#/support">Support</a></li>
         <li><a href="/#/comments">Comments</a></li>
+        <li><a href="/#/table">Table</a></li>
      
       </ul>
       <Router>
@@ -36,6 +38,9 @@ function App() {
       </Route>
       <Route path='/comments' >
       < Comments />
+      </Route>
+      <Route path='/table' >
+      < Table />
       </Route>
       </Router>
     </div>

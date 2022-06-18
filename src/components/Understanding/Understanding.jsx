@@ -14,7 +14,7 @@ function Understanding( props ){
     return (
         <div>
              <h2>How Well Are You Understanding The Conent?</h2>
-             <input onChange={collectUnderstanding}type="text" />
+             <input onChange={collectUnderstanding}type="number" />
             <button onClick={storeUnderstanding}>Next</button>
             {/* <p>Props: { JSON.stringify( props ) }</p> */}
         </div>
