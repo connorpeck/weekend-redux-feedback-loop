@@ -14,10 +14,38 @@ const feelingReducer = (state='', action) =>{
     return state;
 } // end feeling reducer
 
+const understandingReducer = (state='', action) =>{
+    console.log('understandingReducer', action);
+    if (action.type === 'ADD_UNDERSTANDING'){
+        state = action.payload
+    }
+    return state;
+} // end understanding reducer
+
+const supportReducer = (state='', action) =>{
+    console.log('supportReducer', action);
+    if (action.type === 'ADD_SUPPORT'){
+        state = action.payload
+    }
+    return state;
+} // end support reducer
+
+const commentsReducer = (state='', action) =>{
+    console.log('commentsReducer', action);
+    if (action.type === 'ADD_COMMENTS'){
+        state = action.payload
+    }
+    return state;
+} // end comments reducer
+
+
 
 const store = createStore (
     combineReducers({
-        feelingReducer
+        feelingReducer,
+        understandingReducer,
+        supportReducer,
+        commentsReducer
     })
 ) // end create store
 ReactDOM.render(<Provider store = {store}><App /></Provider>, document.getElementById('root'));

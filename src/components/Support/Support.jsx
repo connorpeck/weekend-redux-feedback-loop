@@ -1,7 +1,11 @@
 import { useState } from 'react';
+import {useDispatch, useSelector} from 'react-redux';
 
 function Support( props ){
     const [ support, setSupport ] = useState( null );
+
+    const supportReducer = useSelector( store => store.supportReducer);
+    const dispatch = useDispatch();
 
     const collectSupport = () => {
         console.log(event.target.value);
@@ -9,6 +13,7 @@ function Support( props ){
     }
     const storeSupport = () => {
         console.log(support);
+        dispatch ( { type: 'ADD_SUPPORT', payload: support});
     }
     return (
         <div>

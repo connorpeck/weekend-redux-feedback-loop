@@ -1,7 +1,11 @@
 import { useState } from 'react';
+import {useDispatch, useSelector} from 'react-redux';
 
 function Understanding( props ){
     const [ understanding, setUnderstanding ] = useState( null );
+
+    const understandingReducer = useSelector( store => store.understandingReducer);
+    const dispatch = useDispatch();
 
     const collectUnderstanding = () => {
         console.log(event.target.value);
@@ -9,6 +13,7 @@ function Understanding( props ){
     }
     const storeUnderstanding = () => {
         console.log(understanding);
+        dispatch ( { type: 'ADD_UNDERSTANDING', payload: understanding});
     }
     
     return (

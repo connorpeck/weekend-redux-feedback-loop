@@ -1,0 +1,10 @@
+
+
+table, tbody, tr {
+    border: 3px solid #122b9c;
+    border-collapse: collapse;
+    align-items:center ;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}

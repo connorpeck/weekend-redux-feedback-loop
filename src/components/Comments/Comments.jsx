@@ -1,7 +1,10 @@
 import { useState } from 'react';
+import {useDispatch, useSelector} from 'react-redux';
 
 function Comments( props ){
     const [ comments, setComments ] = useState( null );
+    const commentsReducer = useSelector( store => store.commentsReducer);
+    const dispatch = useDispatch();
 
     const collectComments = () => {
         console.log(event.target.value);
@@ -9,6 +12,8 @@ function Comments( props ){
     }
     const storeComments = () => {
         console.log(comments);
+        dispatch ( { type: 'ADD_COMMENTS', payload: comments});
+
     }
     return (
         <div>
