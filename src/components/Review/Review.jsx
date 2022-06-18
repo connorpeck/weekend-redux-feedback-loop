@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import { useSelector } from 'react-redux';
 import './review.css'
+import { useHistory } from 'react-router-dom';
 
 function Review( props ){
     const [hook, setHook] = useState ( null )
@@ -8,9 +9,11 @@ function Review( props ){
     const understandingReducer = useSelector ( store => store.understandingReducer);
     const supportReducer = useSelector ( store => store.supportReducer);
     const commentsReducer = useSelector ( store => store.commentsReducer);
+    const history = useHistory();
 
     const submitInfo = () => {
         console.log('in submitInfo ');
+        history.push('/success')
     }
 
     return (

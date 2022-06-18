@@ -7,6 +7,8 @@ import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
+import Success from '../Success/Success';
+import Home from '../Home/Home';
 import {useSelector} from 'react-redux';
 
 
@@ -18,12 +20,6 @@ function App() {
         <h1 className='App-title'>Feedback!</h1>
         <h4>Don't forget it!</h4>
       </header>
-      <ul>
-       
-        <li><a href="/#/feeling">Start</a></li>
-      
-     
-      </ul>
       <Router>
         <Route path='/feeling' >
       < Feeling />
@@ -39,6 +35,12 @@ function App() {
       </Route>
       <Route path='/review' >
       < Review />
+      </Route>
+      <Route path='/success' >
+      < Success />
+      </Route>
+      <Route path='/home' >
+      < Home />
       </Route>
       </Router>
     </div>
