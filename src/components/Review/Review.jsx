@@ -8,6 +8,11 @@ function Review( props ){
     const understandingReducer = useSelector ( store => store.understandingReducer);
     const supportReducer = useSelector ( store => store.supportReducer);
     const commentsReducer = useSelector ( store => store.commentsReducer);
+
+    const submitInfo = () => {
+        console.log('in submitInfo ');
+    }
+
     return (
         <div>
             <h1>Review Your Feedback</h1>
@@ -21,6 +26,8 @@ function Review( props ){
             </tbody>
 
             </table>
+            <br />
+            <button onClick={submitInfo}>Submit</button>
 
             
         </div>

@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 function Comments( props ){
     const [ comments, setComments ] = useState( null );
     const commentsReducer = useSelector( store => store.commentsReducer);
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const collectComments = () => {
         console.log(event.target.value);
@@ -13,6 +15,7 @@ function Comments( props ){
     const storeComments = () => {
         console.log(comments);
         dispatch ( { type: 'ADD_COMMENTS', payload: comments});
+        history.push('/review')
 
     }
     return (

@@ -20,11 +20,8 @@ function App() {
       </header>
       <ul>
        
-        <li><a href="/#/feeling">Feeling</a></li>
-        <li><a href="/#/understanding">Understanding</a></li>
-        <li><a href="/#/support">Support</a></li>
-        <li><a href="/#/comments">Comments</a></li>
-        <li><a href="/#/review">Review</a></li>
+        <li><a href="/#/feeling">Start</a></li>
+      
      
       </ul>
       <Router>
