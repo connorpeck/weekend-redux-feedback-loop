@@ -16,7 +16,7 @@ function Feeling( props ){
 
     const collectFeeling = () => {
         console.log(event.target.value);
-        setFeeling('Feelings: ' + event.target.value);
+        setFeeling( event.target.value);
     }
 
     

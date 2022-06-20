@@ -11,7 +11,7 @@ function Understanding( props ){
 
     const collectUnderstanding = () => {
         console.log(event.target.value);
-        setUnderstanding('Understanding: ' + event.target.value);
+        setUnderstanding( event.target.value);
     }
     const storeUnderstanding = () => {
         console.log(understanding);

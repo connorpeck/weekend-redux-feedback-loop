@@ -11,7 +11,7 @@ function Support( props ){
 
     const collectSupport = () => {
         console.log(event.target.value);
-        setSupport('Support: ' + event.target.value);
+        setSupport( event.target.value);
     }
     const storeSupport = () => {
         console.log(support);

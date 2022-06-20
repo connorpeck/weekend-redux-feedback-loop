@@ -10,7 +10,7 @@ function Comments( props ){
 
     const collectComments = () => {
         console.log(event.target.value);
-        setComments('Comments: ' + event.target.value);
+        setComments( event.target.value);
     }
     const storeComments = () => {
         console.log(comments);
