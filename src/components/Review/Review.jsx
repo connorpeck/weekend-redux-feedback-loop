@@ -38,10 +38,10 @@ function Review( props ){
             
             <table>
                 <tbody>
-            <tr>{feelingReducer} </tr>
-            <tr>{understandingReducer}</tr>
-            <tr>{supportReducer}</tr>
-            <tr>{commentsReducer}</tr>
+            <tr>Feeling: {feelingReducer} </tr>
+            <tr>Understanding: {understandingReducer}</tr>
+            <tr>Support: {supportReducer}</tr>
+            <tr>Comments: {commentsReducer}</tr>
             </tbody>
 
             </table>

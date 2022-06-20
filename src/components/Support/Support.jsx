@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import './Support.css'
 
 function Support( props ){
     const [ support, setSupport ] = useState( null );
@@ -19,7 +20,7 @@ function Support( props ){
         history.push('/comments');
     }
     return (
-        <div>
+        <div className='supportDiv'>
             <h2>How Well Are You Being Supported?</h2>
             <input onChange={collectSupport}type="number" />
             <button onClick={storeSupport}>Next</button>

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import './Comments.css'
 
 function Comments( props ){
     const [ comments, setComments ] = useState( null );
@@ -19,7 +20,7 @@ function Comments( props ){
 
     }
     return (
-        <div>
+        <div className='commentsDiv'>
             <h2>Any Comments You Would Like To Leave?</h2>
             <input onChange={collectComments}type="text" />
             <button onClick={storeComments}>Next</button>

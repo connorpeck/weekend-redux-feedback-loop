@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import { Route, HashRouter as Router } from 'react-router-dom';
+import './Feeling.css'
 // import { useNavigate} from 'react-router-dom'//
 // not working with this version of rrd
 import { useHistory } from 'react-router-dom';
@@ -28,7 +29,7 @@ function Feeling( props ){
     }
 
     return (
-        <div>
+        <div className='feelingDiv'>
             
             <h2>How are you feeling today?</h2>
             <input onChange={collectFeeling}type="number" />

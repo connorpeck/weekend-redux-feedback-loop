@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import './Understanding.css'
 
 function Understanding( props ){
     const [ understanding, setUnderstanding ] = useState( null );
@@ -20,7 +21,7 @@ function Understanding( props ){
     }
     
     return (
-        <div>
+        <div className='understandingDiv'>
              <h2>How Well Are You Understanding The Conent?</h2>
              <input onChange={collectUnderstanding}type="number" />
             <button onClick={storeUnderstanding}>Next</button>
