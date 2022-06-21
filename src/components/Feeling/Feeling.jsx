@@ -9,10 +9,15 @@ import { useHistory } from 'react-router-dom';
 import Understanding from '../Understanding/Understanding';
 
 function Feeling( props ){
-    const [ feeling, setFeeling ] = useState( null );
+    const [ feeling, setFeeling ] = useState( '' );
     const feelingReducer = useSelector( store => store.feelingReducer);
     const dispatch = useDispatch();
-    // const naviagte = useNavigate();
+
+    const emptyFieldAlert = () => {
+        alert('Please input a number');
+    } // end emptyFieldAlert
+
+
     const history = useHistory();
 
     const collectFeeling = () => {
@@ -23,10 +28,17 @@ function Feeling( props ){
     
     const storeFeeling = () => {
         console.log(feeling);
+        {feeling ? 
+        (emptyFieldAlert ())
+
+        (console.log('add input', feeling))
+
+        :
         dispatch ( { type: 'ADD_FEELING', payload: feeling});
         history.push( '/understanding' );
 
-    }
+    } // end conditional
+    } // end storeFeeling
 
     return (
         <div className='feelingDiv'>

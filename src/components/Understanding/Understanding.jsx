@@ -4,21 +4,34 @@ import { useHistory } from 'react-router-dom';
 import './Understanding.css'
 
 function Understanding( props ){
-    const [ understanding, setUnderstanding ] = useState( null );
+    const [ understanding, setUnderstanding ] = useState( '' )
 
     const understandingReducer = useSelector( store => store.understandingReducer);
     const dispatch = useDispatch();
     const history = useHistory();
 
+    const emptyFieldAlert = () => {
+        alert('Please input a number');
+    } // end emptyFieldAlert
+
+
     const collectUnderstanding = () => {
         console.log(event.target.value);
-        setUnderstanding( event.target.value);
-    }
+        setUnderstanding( event .target.value);
+    } // end collectUnderstanding
+
+
     const storeUnderstanding = () => {
-        console.log(understanding);
-        dispatch ( { type: 'ADD_UNDERSTANDING', payload: understanding});
-        history.push( '/support' );
-    }
+        console.log( understanding);
+        {understanding ?  (emptyFieldAlert ())
+        (console.log('add input', understanding))
+        :
+        dispatch ( { type: 'ADD_UNDERSTANDING', payload: understanding})
+        history.push( '/support' )
+    } // end conditional 
+} // end storeUnderstanding
+
+   
     
     return (
         <div className='understandingDiv'>

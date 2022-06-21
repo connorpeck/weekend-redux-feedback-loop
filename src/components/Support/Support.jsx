@@ -4,11 +4,15 @@ import { useHistory } from 'react-router-dom';
 import './Support.css'
 
 function Support( props ){
-    const [ support, setSupport ] = useState( null );
+    const [ support, setSupport ] = useState( '' );
 
     const supportReducer = useSelector( store => store.supportReducer);
     const dispatch = useDispatch();
     const history = useHistory();
+
+    const emptyFieldAlert = () => {
+        alert('Please input a number');
+    } // end emptyFieldAlert
 
     const collectSupport = () => {
         console.log(event.target.value);
@@ -16,9 +20,13 @@ function Support( props ){
     }
     const storeSupport = () => {
         console.log(support);
+        {support ? (emptyFieldAlert())
+        (console.log('add input', support))
+        :
         dispatch ( { type: 'ADD_SUPPORT', payload: support});
         history.push('/comments');
-    }
+    } // end conditional
+} // end storeSupport
     return (
         <div className='supportDiv'>
             <h2>How Well Are You Being Supported?</h2>
