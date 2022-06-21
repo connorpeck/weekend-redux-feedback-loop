@@ -15,3 +15,8 @@ tr {
 thead {
     text-align: center;
 }
+
+.submitBtn {
+    size: 20px;
+    color: #000;
+}

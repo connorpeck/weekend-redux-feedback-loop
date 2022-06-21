@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import "./review.css";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import { Button } from "@mui/material";
 
 function Review(props) {
   const [hook, setHook] = useState(null);
@@ -65,14 +66,14 @@ function Review(props) {
       <table>
         <tbody>
           {/* <thead>Feedback</thead> */}
-          <tr>Feeling</tr> <td> {feelingReducer} <button onClick={updateFeeling}>Update</button></td>
-          <tr>Understanding</tr> <td>{understandingReducer} <button onClick={updateUnderstanding}>Update</button></td>
-          <tr>Support </tr> <td >{supportReducer} <button onClick={updateSupport}>Update</button></td>
-          <tr>Comments </tr> <td>{commentsReducer} <button onClick={updateComments}>Update</button></td>
+          <tr>Feeling</tr> <td> {feelingReducer} <Button variant='text' size='small'onClick={updateFeeling}>Update</Button></td>
+          <tr>Understanding</tr> <td>{understandingReducer} <Button variant='text' size='small'onClick={updateUnderstanding}>Update</Button></td>
+          <tr>Support </tr> <td >{supportReducer} <Button variant='text' size='small'onClick={updateSupport}>Update</Button></td>
+          <tr>Comments </tr> <td>{commentsReducer} <Button variant='text' size='small' onClick={updateComments}>Update</Button></td>
         </tbody>
       </table>
       <br />
-      <button onClick={submitInfo}>Submit</button>
+      <Button variant='contained' className='submitBtn' onClick={submitInfo}>Submit</Button>
     </div>
   );
 }
