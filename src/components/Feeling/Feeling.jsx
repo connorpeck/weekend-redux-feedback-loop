@@ -45,7 +45,7 @@ function Feeling(props) {
     <div className="feelingDiv">
       <h2>How are you feeling today?</h2>
       <button onClick={previousPage}>Back</button>
-      <input onChange={collectFeeling} type="number" />
+      <input onChange={collectFeeling} type="number" placeholder="1-10"/>
       <button onClick={storeFeeling}>Next</button>
       {/* <Router>
 

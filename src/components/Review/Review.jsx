@@ -35,16 +35,40 @@ function Review(props) {
       });
   };
 
+  const updateFeeling = () => {
+    console.log("in previousPage");
+    history.push("/feeling");
+  };
+
+
+  const updateUnderstanding = () => {
+    console.log("in previousPage");
+    history.push("/understanding");
+  };
+
+
+  const updateSupport = () => {
+    console.log("in previousPage");
+    history.push("/support");
+  };
+
+
+  const updateComments = () => {
+    console.log("in previousPage");
+    history.push("/comments");
+  };
+
   return (
     <div>
       <h1>Review Your Feedback</h1>
 
       <table>
         <tbody>
-          <tr>Feeling: {feelingReducer} </tr>
-          <tr>Understanding: {understandingReducer}</tr>
-          <tr>Support: {supportReducer}</tr>
-          <tr>Comments: {commentsReducer}</tr>
+          {/* <thead>Feedback</thead> */}
+          <tr>Feeling</tr> <td> {feelingReducer} <button onClick={updateFeeling}>Update</button></td>
+          <tr>Understanding</tr> <td>{understandingReducer} <button onClick={updateUnderstanding}>Update</button></td>
+          <tr>Support </tr> <td >{supportReducer} <button onClick={updateSupport}>Update</button></td>
+          <tr>Comments </tr> <td>{commentsReducer} <button onClick={updateComments}>Update</button></td>
         </tbody>
       </table>
       <br />

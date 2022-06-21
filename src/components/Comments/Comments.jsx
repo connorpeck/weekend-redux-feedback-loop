@@ -28,7 +28,7 @@ function Comments(props) {
     <div className="commentsDiv">
       <h2>Any Comments You Would Like To Leave?</h2>
       <button onClick={previousPage}>Back</button>
-      <input onChange={collectComments} type="text" />
+      <input onChange={collectComments} type="text" placeholder="Comments?" />
       <button onClick={storeComments}>Next</button>
       {/* <p>Props: { JSON.stringify( props ) }</p> */}
     </div>

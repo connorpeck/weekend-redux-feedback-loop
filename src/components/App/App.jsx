@@ -20,6 +20,9 @@ function App() {
         <button className="homeBtn">
           <a href="/#/home">Home</a>
         </button>
+        <button className="homeBtn">
+          <a href="/#/review">Review</a>
+        </button>
       </header>
       <Router>
         <Route path="/feeling">
