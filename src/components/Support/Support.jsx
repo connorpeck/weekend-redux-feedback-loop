@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import "./Support.css";
+import { Button } from "@mui/material";
+
 
 function Support(props) {
   const [support, setSupport] = useState("");
@@ -38,9 +40,9 @@ function Support(props) {
   return (
     <div className="supportDiv">
       <h2>How Well Are You Being Supported?</h2>
-      <button onClick={previousPage}>Back</button>
+      <Button variant='text' size='small' onClick={previousPage}>Back</Button>
       <input onChange={collectSupport} type="number" placeholder="1-10"/>
-      <button onClick={storeSupport}>Next</button>
+      <Button variant='text' size='small' onClick={storeSupport}>Next</Button>
       {/* <p>Props: { JSON.stringify( props ) }</p> */}
     </div>
   );

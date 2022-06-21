@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import "./Comments.css";
+import { Button } from "@mui/material";
 
 function Comments(props) {
   const [comments, setComments] = useState(null);
@@ -27,9 +28,9 @@ function Comments(props) {
   return (
     <div className="commentsDiv">
       <h2>Any Comments You Would Like To Leave?</h2>
-      <button onClick={previousPage}>Back</button>
+      <Button variant='text' size='small' onClick={previousPage}>Back</Button>
       <input onChange={collectComments} type="text" placeholder="Comments?" />
-      <button onClick={storeComments}>Next</button>
+      <Button variant='text' size='small' onClick={storeComments}>Next</Button>
       {/* <p>Props: { JSON.stringify( props ) }</p> */}
     </div>
   );

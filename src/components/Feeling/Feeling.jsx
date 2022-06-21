@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Route, HashRouter as Router } from "react-router-dom";
+import { Button } from "@mui/material";
 import "./Feeling.css";
 // import { useNavigate} from 'react-router-dom'//
 // not working with this version of rrd
@@ -44,9 +45,9 @@ function Feeling(props) {
   return (
     <div className="feelingDiv">
       <h2>How are you feeling today?</h2>
-      <button onClick={previousPage}>Back</button>
+      <Button variant='text' size='small' onClick={previousPage}>Back</Button>
       <input onChange={collectFeeling} type="number" placeholder="1-10"/>
-      <button onClick={storeFeeling}>Next</button>
+      <Button variant='text' size='small' onClick={storeFeeling}>Next</Button>
       {/* <Router>
 
             <Route path='/understanding' >

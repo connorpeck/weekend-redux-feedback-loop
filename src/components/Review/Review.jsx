@@ -73,7 +73,7 @@ function Review(props) {
         </tbody>
       </table>
       <br />
-      <Button variant='contained' className='submitBtn' onClick={submitInfo}>Submit</Button>
+      <Button variant='contained' className='submitBtn' color='success'onClick={submitInfo}>Submit</Button>
     </div>
   );
 }

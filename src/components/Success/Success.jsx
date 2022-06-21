@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { Button } from "@mui/material";
 
 function Success(props) {
   const [hook, setHook] = useState(null);
@@ -12,7 +13,7 @@ function Success(props) {
   return (
     <div>
       <h2>Thank You</h2>
-      <button onClick={leaveNewFeedback}>Leave New Feedback</button>
+      <Button variant='contained' size='large' color='success' onClick={leaveNewFeedback}>Leave New Feedback</Button>
     </div>
   );
 }

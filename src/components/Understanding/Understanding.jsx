@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import "./Understanding.css";
+import { Button } from "@mui/material";
 
 function Understanding(props) {
   const [understanding, setUnderstanding] = useState("");
@@ -41,9 +42,9 @@ function Understanding(props) {
   return (
     <div className="understandingDiv">
       <h2>How Well Are You Understanding The Conent?</h2>
-      <button onClick={previousPage}>Back</button>
+      <Button variant='text' size='small' onClick={previousPage}>Back</Button>
       <input onChange={collectUnderstanding} type="number" placeholder="1-10" />
-      <button onClick={storeUnderstanding}>Next</button>
+      <Button variant='text' size='small' onClick={storeUnderstanding}>Next</Button>
       {/* <p>Props: { JSON.stringify( props ) }</p> */}
     </div>
   );
