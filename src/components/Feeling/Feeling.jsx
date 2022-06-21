@@ -14,7 +14,7 @@ function Feeling( props ){
     const dispatch = useDispatch();
 
     const emptyFieldAlert = () => {
-        alert('Please input a number');
+        alert('Please input a number ');
     } // end emptyFieldAlert
 
 
@@ -28,14 +28,12 @@ function Feeling( props ){
     
     const storeFeeling = () => {
         console.log(feeling);
-        {feeling ? 
-        (emptyFieldAlert ())
-
-        (console.log('add input', feeling))
+        {feeling ? dispatch ( { type: 'ADD_FEELING', payload: feeling},
+        history.push( '/understanding' ))
+        
 
         :
-        dispatch ( { type: 'ADD_FEELING', payload: feeling});
-        history.push( '/understanding' );
+        emptyFieldAlert();
 
     } // end conditional
     } // end storeFeeling

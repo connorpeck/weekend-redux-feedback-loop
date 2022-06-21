@@ -20,13 +20,16 @@ function Support( props ){
     }
     const storeSupport = () => {
         console.log(support);
-        {support ? (emptyFieldAlert())
-        (console.log('add input', support))
+        {support ?  dispatch ( { type: 'ADD_SUPPORT', payload: support},
+        history.push('/comments'))   
+        
         :
-        dispatch ( { type: 'ADD_SUPPORT', payload: support});
-        history.push('/comments');
+        emptyFieldAlert();
+
+       
     } // end conditional
 } // end storeSupport
+
     return (
         <div className='supportDiv'>
             <h2>How Well Are You Being Supported?</h2>

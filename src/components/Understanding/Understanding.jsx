@@ -23,11 +23,11 @@ function Understanding( props ){
 
     const storeUnderstanding = () => {
         console.log( understanding);
-        {understanding ?  (emptyFieldAlert ())
-        (console.log('add input', understanding))
-        :
-        dispatch ( { type: 'ADD_UNDERSTANDING', payload: understanding})
-        history.push( '/support' )
+        {understanding ? dispatch ( { type: 'ADD_UNDERSTANDING', payload: understanding},
+        history.push('/support'))
+        : 
+        emptyFieldAlert();
+    
     } // end conditional 
 } // end storeUnderstanding
 
